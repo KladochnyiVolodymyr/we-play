@@ -27,7 +27,6 @@ export default {
 <style lang="scss" scoped>
 .input-block {
   position: relative;
-  margin-bottom: 34px;
   &:not(:last-child) {
     margin-right: 24px;
   }
@@ -52,6 +51,7 @@ export default {
     font-size: 16px;
     line-height: 16px;
     @include rubik-reg;
+    color: $general-black;
     &::placeholder {
       color: $grey-light;
     }

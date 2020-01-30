@@ -52,6 +52,7 @@ export default {
   padding: 48px 24px 100px 24px;
   border-radius: $border-radius 0px 0px $border-radius;
   background: $general-black;
+  height: 100%;
   &__logo {
     margin-bottom: 13px;
   }

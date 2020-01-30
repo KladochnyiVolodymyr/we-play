@@ -61,7 +61,7 @@ export default {
   }
 }
 .input-row {
-  margin-bottom: 34px;
+  margin-bottom: 31px;
   &_double {
     display: flex;
   }
