@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap");
+
+@mixin rubik-bold {
+  font-family: "Rubik";
+  font-weight: 700;
+}
+
+@mixin rubik-med {
+  font-family: "Rubik";
+  font-weight: 500;
+}
+@mixin rubik-reg {
+  font-family: "Rubik";
+  font-weight: 400;
+}

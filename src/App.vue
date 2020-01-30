@@ -23,7 +23,15 @@ export default {
 .app {
   width: 848px;
   margin: 0 auto;
+  margin-top: 85px;
   border: 1px solid $gold-color;
-  border-radius: 8px;
+  border-radius: $border-radius;
+  display: flex;
+  &__sidebar {
+    width: 324px;
+  }
+  &__payment {
+    width: 524px;
+  }
 }
 </style>
