@@ -21,6 +21,7 @@ export default {
     font-size: 16px;
     color: $grey-color;
     margin-bottom: 24px;
+    line-height: 24px;
   }
   &__btn {
     width: 161px;

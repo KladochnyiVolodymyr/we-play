@@ -20,7 +20,7 @@
         <InputBlock
           label="Security code"
           placeholder="••••"
-          input-type="number"
+          input-type="password"
           input-size="small"
         />
       </div>
@@ -41,12 +41,19 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
+    @media (max-width: $bk576) {
+      display: block;
+      margin-bottom: 28px;
+    }
   }
   &__logos {
     display: flex;
     align-items: center;
     img {
       margin-right: 24px;
+    }
+    @media (max-width: $bk576) {
+      margin-bottom: 24px;
     }
   }
   &__security {
@@ -64,6 +71,9 @@ export default {
   margin-bottom: 31px;
   &_double {
     display: flex;
+    @media (max-width: $bk992) {
+      margin-bottom: 24px;
+    }
   }
 }
 </style>

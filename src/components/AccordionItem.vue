@@ -31,9 +31,15 @@ export default {
   &__header {
     display: flex;
     position: relative;
-    align-self: center;
     margin-bottom: 16px;
     cursor: pointer;
+    @media (max-width: $bk768) {
+      min-height: 48px;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
   }
   &__title {
     @include rubik-med;
@@ -48,6 +54,9 @@ export default {
     top: 8px;
     &.is-active {
       transform: rotate(180deg);
+    }
+    @media (max-width: $bk992) {
+      display: none;
     }
   }
   &__content {

@@ -61,6 +61,14 @@ export default {
 .payment {
   padding: 48px 24px 24px;
   border-left: 1px solid $border-color-light;
+  @media (max-width: $bk992) {
+    border: 1px solid $border-color-light;
+    border-radius: 0px 0px $border-radius $border-radius;
+    padding: 24px;
+  }
+  @media (max-width: $bk576) {
+    padding: 16px;
+  }
   &-switch {
     display: flex;
     margin-bottom: 24px;
@@ -81,6 +89,9 @@ export default {
     &__tab {
       min-height: 233px;
       display: none;
+      @media (max-width: $bk576) {
+        min-height: 180px;
+      }
       &.is-active {
         display: block;
       }
@@ -95,6 +106,9 @@ export default {
       display: flex;
       justify-content: space-between;
       margin-bottom: 53px;
+      @media (max-width: $bk992) {
+        margin-bottom: 24px;
+      }
       span {
         color: $general-black;
         @include rubik-med;
@@ -110,6 +124,7 @@ export default {
     color: $grey-color;
     @include rubik-reg;
     font-size: 12px;
+    line-height: 18px;
     a {
       color: $blue-color;
     }

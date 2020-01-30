@@ -2,7 +2,9 @@
   <div class="sidebar">
     <img class="sidebar__logo" src="@/assets/img/logo.svg" />
     <h1 class="sidebar__title">Premium</h1>
-    <Accordion :accordion-data="accordion" />
+    <div class="sidebar__accordion">
+      <Accordion :accordion-data="accordion" />
+    </div>
   </div>
 </template>
 <script>
@@ -50,12 +52,23 @@ export default {
 <style lang="scss" scoped>
 .sidebar {
   padding: 48px 24px 100px 24px;
-  border-radius: $border-radius 0px 0px $border-radius;
-  background: $general-black;
   height: 100%;
-  background-image: url("../assets/img/shutterstock.png");
+  background: linear-gradient(
+      0deg,
+      rgba(1, 14, 40, 0) 0%,
+      rgba(1, 14, 40, 0.8) 55.44%
+    ),
+    url("../assets/img/shutterstock.png");
+  background-blend-mode: normal, lighten;
   background-position: bottom;
-  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: $bk992) {
+    border-radius: $border-radius $border-radius 0 0;
+    padding: 48px 24px 24px 24px;
+  }
+  @media (max-width: $bk576) {
+    padding: 40px 16px 24px 16px;
+  }
   &__logo {
     margin-bottom: 13px;
   }
@@ -66,6 +79,14 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 25px;
+    @media (max-width: $bk576) {
+      margin-bottom: 0;
+    }
+  }
+  &__accordion {
+    @media (max-width: $bk576) {
+      display: none;
+    }
   }
 }
 </style>
