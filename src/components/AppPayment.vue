@@ -1,12 +1,21 @@
 <template>
   <div class="payment">
     <ul class="payment-switch">
-      <li class="payment-switch__item is-active">Credit card</li>
-      <li class="payment-switch__item">PayPal</li>
+      <li
+        @click="setActive('credit-card')"
+        :class="['payment-switch__item',{ 'is-active': isActive('credit-card') }]"
+      >Credit card</li>
+      <li
+        @click="setActive('pay-pal')"
+        :class="['payment-switch__item',{ 'is-active': isActive('pay-pal') }]"
+      >PayPal</li>
     </ul>
     <div class="payment-content">
-      <div class="payment-content__tab">
+      <div class="payment-content__tab" :class="{ 'is-active': isActive('credit-card') }">
         <CreditCardTab />
+      </div>
+      <div class="payment-content__tab" :class="{ 'is-active': isActive('pay-pal') }">
+        <PayPalTab />
       </div>
     </div>
     <div class="payment-footer">
@@ -22,15 +31,31 @@
     <div class="payment__agree">
       <p>
         By proceeding payment I agree to WePlay!
-        <a href="#">& Conditions and Privacy Policy</a>
+        <a href="#">Terms & Conditions and Privacy Policy</a>
       </p>
     </div>
   </div>
 </template>
 <script>
 import CreditCardTab from "../components/CreditCardTab.vue";
+import PayPalTab from "../components/PayPalTab.vue";
 import Button from "../components/Button.vue";
-export default { components: { CreditCardTab, Button } };
+export default {
+  components: { CreditCardTab, Button, PayPalTab },
+  data() {
+    return {
+      activeTab: "credit-card"
+    };
+  },
+  methods: {
+    setActive(tabMenu) {
+      this.activeTab = tabMenu;
+    },
+    isActive(tabMenu) {
+      return this.activeTab === tabMenu;
+    }
+  }
+};
 </script>
 <style lang="scss" scoped>
 .payment {
@@ -49,6 +74,15 @@ export default { components: { CreditCardTab, Button } };
       &.is-active {
         color: $general-black;
         border-bottom: 2px solid $blue-color;
+      }
+    }
+  }
+  &-content {
+    &__tab {
+      min-height: 258px;
+      display: none;
+      &.is-active {
+        display: block;
       }
     }
   }
