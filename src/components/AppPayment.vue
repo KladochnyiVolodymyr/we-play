@@ -79,7 +79,7 @@ export default {
   }
   &-content {
     &__tab {
-      min-height: 258px;
+      min-height: 233px;
       display: none;
       &.is-active {
         display: block;

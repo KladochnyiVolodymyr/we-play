@@ -53,6 +53,9 @@ export default {
   border-radius: $border-radius 0px 0px $border-radius;
   background: $general-black;
   height: 100%;
+  background-image: url("../assets/img/shutterstock.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
   &__logo {
     margin-bottom: 13px;
   }
