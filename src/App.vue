@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <div class="app__sidebar">
+      <AppSidebar />
+    </div>
+    <div class="app__payment">
+      <AppPayment />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppSidebar from "./components/AppSidebar.vue";
+import AppPayment from "./components/AppPayment.vue";
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  name: "app",
+  components: { AppSidebar, AppPayment }
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.app {
+  width: 848px;
+  margin: 0 auto;
+  border: 1px solid $gold-color;
+  border-radius: 8px;
 }
 </style>
