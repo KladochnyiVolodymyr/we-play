@@ -1,22 +1,14 @@
 <template>
   <div class="accordion-item">
     <div class="accordion-item__header" @click="active = !active">
-      <img
-        class="accordion-item__icon"
-        :src="require(`@/assets/img/svg/${itemData.icon}.svg`)"
-      />
+      <img class="accordion-item__icon" :src="require(`@/assets/img/icons/${itemData.icon}.svg`)" />
       <h3 class="accordion-item__title">{{ itemData.title }}</h3>
       <img
-        :class="[
-          'accordion-item__arrow',
-          { 'accordion-item__arrow_active': active }
-        ]"
-        src="@/assets/img/svg/arrow.svg"
+        :class="['accordion-item__arrow', { 'is-active': active }]"
+        src="@/assets/img/icons/arrow.svg"
       />
     </div>
-    <p class="accordion-item__content" v-if="active">
-      {{ itemData.content }}
-    </p>
+    <p class="accordion-item__content" v-if="active">{{ itemData.content }}</p>
   </div>
 </template>
 <script>
@@ -54,7 +46,7 @@ export default {
     position: absolute;
     right: 8px;
     top: 8px;
-    &_active {
+    &.is-active {
       transform: rotate(180deg);
     }
   }

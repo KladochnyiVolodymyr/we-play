@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <img class="sidebar__logo" src="@/assets/img/svg/logo.svg" />
+    <img class="sidebar__logo" src="@/assets/img/logo.svg" />
     <h1 class="sidebar__title">Premium</h1>
     <Accordion :accordion-data="accordion" />
   </div>
