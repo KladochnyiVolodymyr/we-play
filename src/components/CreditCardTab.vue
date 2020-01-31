@@ -84,11 +84,12 @@ export default {
   }
 }
 .input-row {
-  padding-bottom: 31px;
+  margin-bottom: 31px;
   &_double {
     display: flex;
+    margin-bottom: 0px;
     @media (max-width: $bk992) {
-      padding-bottom: 24px;
+      margin-bottom: 24px;
     }
   }
 }
