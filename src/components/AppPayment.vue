@@ -83,6 +83,9 @@ export default {
         color: $general-black;
         border-bottom: 2px solid $blue-color;
       }
+      &:hover {
+        color: $general-black;
+      }
     }
   }
   &-content {

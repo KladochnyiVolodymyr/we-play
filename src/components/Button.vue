@@ -22,6 +22,10 @@ export default {
   border-radius: 20px;
   box-sizing: border-box;
   cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
   &_secondary {
     color: $blue-color;
     border: 1px solid $blue-color;
