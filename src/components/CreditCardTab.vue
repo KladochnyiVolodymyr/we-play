@@ -22,17 +22,13 @@
         />
       </div>
       <div class="input-row input-row_double">
-        <InputBlock
-          label="Valid thru"
-          placeholder="MM/YY"
-          mask="##/##"
-          input-size="small"
-        />
+        <InputBlock label="Valid thru" placeholder="MM/YY" mask="##/##" input-size="small" />
         <InputBlock
           label="Security code"
           placeholder="••••"
           input-size="small"
           mask="####"
+          input-type="password"
         />
       </div>
     </div>

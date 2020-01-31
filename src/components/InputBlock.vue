@@ -1,11 +1,7 @@
 <template>
   <div :class="['input-block', `input-block_${inputSize}`]">
     <label class="input-block__label">{{ label }}</label>
-    <the-mask
-      class="input-block__input"
-      :mask="mask"
-      :placeholder="placeholder"
-    />
+    <input class="input-block__input" :placeholder="placeholder" v-mask="mask" :type="inputType" />
     <icon-base class="input-block__icon" width="16" height="20">
       <icon-lock fill="#63708a" />
     </icon-base>
@@ -14,13 +10,12 @@
 <script>
 import IconBase from "../components/IconBase.vue";
 import IconLock from "../components/icons/IconLock.vue";
-import { TheMask } from "vue-the-mask";
+import { mask } from "vue-the-mask";
 
 export default {
   components: {
     IconBase,
-    IconLock,
-    TheMask
+    IconLock
   },
   props: {
     label: {
@@ -35,8 +30,12 @@ export default {
     },
     mask: {
       type: String
+    },
+    inputType: {
+      type: String
     }
-  }
+  },
+  directives: { mask }
 };
 </script>
 <style lang="scss" scoped>
