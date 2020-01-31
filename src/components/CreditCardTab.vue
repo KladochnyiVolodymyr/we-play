@@ -15,15 +15,24 @@
     </div>
     <div class="credit-card__form">
       <div class="input-row">
-        <InputBlock label="Card number" placeholder="5167 9855 6160 0974" input-type="number" />
+        <InputBlock
+          label="Card number"
+          placeholder="5167 9855 6160 0974"
+          mask="#### #### #### ####"
+        />
       </div>
       <div class="input-row input-row_double">
-        <InputBlock label="Valid thru" placeholder="MM/YY" input-type="number" input-size="small" />
+        <InputBlock
+          label="Valid thru"
+          placeholder="MM/YY"
+          mask="##/##"
+          input-size="small"
+        />
         <InputBlock
           label="Security code"
           placeholder="••••"
-          input-type="password"
           input-size="small"
+          mask="####"
         />
       </div>
     </div>
