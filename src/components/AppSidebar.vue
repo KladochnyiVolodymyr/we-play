@@ -67,7 +67,14 @@ export default {
     padding: 48px 24px 24px 24px;
   }
   @media (max-width: $bk576) {
-    padding: 40px 16px 24px 16px;
+    padding: 46px 16px 24px 16px;
+    background: linear-gradient(
+        0deg,
+        rgba(1, 14, 40, 0) 0%,
+        rgba(1, 14, 40, 0.8) 100%
+      ),
+      url("../assets/img/shutterstock.png");
+    background-position: bottom;
   }
   &__logo {
     margin-bottom: 13px;
@@ -81,6 +88,7 @@ export default {
     margin-bottom: 25px;
     @media (max-width: $bk576) {
       margin-bottom: 0;
+      font-size: 32px;
     }
   }
   &__accordion {
