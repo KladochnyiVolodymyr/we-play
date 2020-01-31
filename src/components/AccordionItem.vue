@@ -12,7 +12,9 @@
         <icon-arrow />
       </icon-base>
     </div>
-    <p class="accordion-item__content" v-if="active">{{ itemData.content }}</p>
+    <transition name="fade">
+      <p class="accordion-item__content" v-if="active">{{ itemData.content }}</p>
+    </transition>
   </div>
 </template>
 <script>
@@ -62,6 +64,7 @@ export default {
     position: absolute;
     right: 8px;
     top: 8px;
+    transition: ease-in-out 0.2s;
     &.is-active {
       transform: rotate(180deg);
     }
@@ -73,6 +76,7 @@ export default {
     @include rubik-reg;
     color: #fff;
     line-height: 24px;
+    transition: ease-in-out 0.2s;
   }
 }
 </style>
