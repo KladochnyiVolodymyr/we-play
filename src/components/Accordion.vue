@@ -1,6 +1,12 @@
 <template>
   <div class="accordion">
-    <AccordionItem v-for="item in accordionData" :key="item.id" :item-data="item" />
+    <AccordionItem
+      v-for="item in accordionData"
+      :key="item.id"
+      :item-data="item"
+      @click.native="setActiveItem(item.id)"
+      :active="currentActive === item.id"
+    />
   </div>
 </template>
 <script>
@@ -12,6 +18,16 @@ export default {
   props: {
     accordionData: {
       type: Array
+    }
+  },
+  data() {
+    return {
+      currentActive: 1
+    };
+  },
+  methods: {
+    setActiveItem(id) {
+      this.currentActive = id;
     }
   }
 };

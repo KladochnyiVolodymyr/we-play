@@ -1,6 +1,6 @@
 <template>
   <div class="accordion-item">
-    <div class="accordion-item__header" @click="active = !active">
+    <div class="accordion-item__header">
       <img class="accordion-item__icon" :src="require(`@/assets/img/icons/${itemData.icon}.svg`)" />
       <h3 class="accordion-item__title">{{ itemData.title }}</h3>
       <icon-base
@@ -12,9 +12,7 @@
         <icon-arrow />
       </icon-base>
     </div>
-    <transition name="fade">
-      <p class="accordion-item__content" v-if="active">{{ itemData.content }}</p>
-    </transition>
+    <p class="accordion-item__content" v-if="active">{{ itemData.content }}</p>
   </div>
 </template>
 <script>
@@ -28,12 +26,10 @@ export default {
   props: {
     itemData: {
       type: Object
+    },
+    active: {
+      type: Boolean
     }
-  },
-  data() {
-    return {
-      active: false
-    };
   }
 };
 </script>
