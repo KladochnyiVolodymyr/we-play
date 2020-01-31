@@ -1,7 +1,12 @@
 <template>
   <div :class="['input-block', `input-block_${inputSize}`]">
     <label class="input-block__label">{{ label }}</label>
-    <input class="input-block__input" :placeholder="placeholder" v-mask="mask" :type="inputType" />
+    <input
+      class="input-block__input"
+      :placeholder="placeholder"
+      v-mask="mask"
+      :type="inputType"
+    />
     <icon-base class="input-block__icon" width="16" height="20">
       <icon-lock fill="#63708a" />
     </icon-base>
@@ -63,7 +68,6 @@ export default {
     box-sizing: border-box;
     width: 100%;
     font-size: 16px;
-    line-height: 16px;
     @include rubik-reg;
     color: $general-black;
     &::placeholder {
@@ -81,7 +85,7 @@ export default {
   &__icon {
     position: absolute;
     right: 19px;
-    bottom: 11px;
+    bottom: 12px;
   }
 }
 </style>
