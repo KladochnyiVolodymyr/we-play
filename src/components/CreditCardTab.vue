@@ -22,7 +22,12 @@
         />
       </div>
       <div class="input-row input-row_double">
-        <InputBlock label="Valid thru" placeholder="MM/YY" mask="##/##" input-size="small" />
+        <InputBlock
+          label="Valid thru"
+          placeholder="MM/YY"
+          mask="##/##"
+          input-size="small"
+        />
         <InputBlock
           label="Security code"
           placeholder="••••"
@@ -79,11 +84,11 @@ export default {
   }
 }
 .input-row {
-  margin-bottom: 31px;
+  padding-bottom: 31px;
   &_double {
     display: flex;
     @media (max-width: $bk992) {
-      margin-bottom: 24px;
+      padding-bottom: 24px;
     }
   }
 }
