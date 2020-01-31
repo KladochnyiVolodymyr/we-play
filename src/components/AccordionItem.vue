@@ -3,16 +3,26 @@
     <div class="accordion-item__header" @click="active = !active">
       <img class="accordion-item__icon" :src="require(`@/assets/img/icons/${itemData.icon}.svg`)" />
       <h3 class="accordion-item__title">{{ itemData.title }}</h3>
-      <img
+      <icon-base
         :class="['accordion-item__arrow', { 'is-active': active }]"
-        src="@/assets/img/icons/arrow.svg"
-      />
+        class="input-block__icon"
+        width="10"
+        height="6"
+      >
+        <icon-arrow />
+      </icon-base>
     </div>
     <p class="accordion-item__content" v-if="active">{{ itemData.content }}</p>
   </div>
 </template>
 <script>
+import IconBase from "../components/IconBase.vue";
+import IconArrow from "../components/icons/IconArrow.vue";
 export default {
+  components: {
+    IconBase,
+    IconArrow
+  },
   props: {
     itemData: {
       type: Object

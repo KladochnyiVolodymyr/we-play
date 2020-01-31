@@ -7,7 +7,9 @@
         <img src="@/assets/img/amex-logo.svg" />
       </div>
       <div class="credit-card__security">
-        <img src="@/assets/img/icons/lock.svg" />
+        <icon-base class="input-block__icon" width="16" height="20">
+          <icon-lock fill="#3bbbe9" />
+        </icon-base>
         <p>Платежная информация защищена</p>
       </div>
     </div>
@@ -29,9 +31,13 @@
 </template>
 <script>
 import InputBlock from "../components/InputBlock.vue";
+import IconBase from "../components/IconBase.vue";
+import IconLock from "../components/icons/IconLock.vue";
 export default {
   components: {
-    InputBlock
+    InputBlock,
+    IconBase,
+    IconLock
   }
 };
 </script>
@@ -62,7 +68,7 @@ export default {
     color: $blue-color;
     font-size: 12px;
     @include rubik-reg;
-    img {
+    svg {
       margin-right: 12px;
     }
   }

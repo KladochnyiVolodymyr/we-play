@@ -2,11 +2,19 @@
   <div :class="['input-block', `input-block_${inputSize}`]">
     <label class="input-block__label">{{label}}</label>
     <input class="input-block__input" :type="inputType" :placeholder="placeholder" />
-    <img class="input-block__icon" src="@/assets/img/icons/lock.svg" />
+    <icon-base class="input-block__icon" width="16" height="20">
+      <icon-lock fill="#63708a" />
+    </icon-base>
   </div>
 </template>
 <script>
+import IconBase from "../components/IconBase.vue";
+import IconLock from "../components/icons/IconLock.vue";
 export default {
+  components: {
+    IconBase,
+    IconLock
+  },
   props: {
     label: {
       type: String
